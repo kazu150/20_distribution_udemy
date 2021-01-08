@@ -51,8 +51,8 @@ const ImageItemList: FC = () => {
 
     return (
         <div className={classes.root}>
-            {data.map((tile) => (
-                <div>
+            {data.map((tile, index) => (
+                <div key={index}>
                     <Button
                         onClick={() => history.push('/download/' + tile.title)}
                     >

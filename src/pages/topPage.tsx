@@ -4,6 +4,7 @@ import TopMain from '../components/topPage/topMain';
 import ResultPage from './resultPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ImageItemList from '../components/resultPage/resultImageList';
+import DownloadPage from './downloadPage';
 
 const TopPage: FC = () => {
     return (
@@ -15,6 +16,9 @@ const TopPage: FC = () => {
                 </Route>
                 <Route path="/search/:keyword" component={ImageItemList} exact>
                     <ResultPage />
+                </Route>
+                <Route path="/download/:keyword" exact>
+                    <DownloadPage />
                 </Route>
             </Switch>
         </Router>
