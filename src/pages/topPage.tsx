@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
 import TopHeader from '../components/topPage/topHeader';
 import TopMain from '../components/topPage/topMain';
+import ResultPage from './resultPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ImageItemList from '../components/resultPage/resultImageList';
 
 const TopPage: FC = () => {
     return (
@@ -11,8 +13,8 @@ const TopPage: FC = () => {
                     <TopHeader />
                     <TopMain />
                 </Route>
-                <Route path="/search/:keyword" exact>
-                    検索結果
+                <Route path="/search/:keyword" component={ImageItemList} exact>
+                    <ResultPage />
                 </Route>
             </Switch>
         </Router>
